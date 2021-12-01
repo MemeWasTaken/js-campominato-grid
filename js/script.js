@@ -24,6 +24,10 @@ btnPlay.addEventListener('click', function () {
             arrayNumbers.push(number);
             square.append(number);
             gridContainer.append(square);
+            square.addEventListener('click', function () {
+                square.classList.add('clicked');
+                // console.log('Funziona');
+            });
         }
 
     } else if (selectForm.value == 1) {
@@ -40,6 +44,10 @@ btnPlay.addEventListener('click', function () {
             arrayNumbers.push(number);
             square.append(number);
             gridContainer.append(square);
+            square.addEventListener('click', function () {
+                square.classList.add('clicked');
+                // console.log('Funziona');
+            });
         }
 
 
@@ -57,9 +65,12 @@ btnPlay.addEventListener('click', function () {
             arrayNumbers.push(number);
             square.append(number);
             gridContainer.append(square);
+            square.addEventListener('click', function () {
+                square.classList.add('clicked');
+                // console.log('Funziona');
+            });
         }
 
 
     }
-    
 })

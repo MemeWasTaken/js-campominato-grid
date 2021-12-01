@@ -107,3 +107,8 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.square.clicked {
+    background-color: #6495ED;
+    color: #FFFFFF;
+}
