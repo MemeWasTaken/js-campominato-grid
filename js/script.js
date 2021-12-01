@@ -1,7 +1,7 @@
 let btnPlay = document.getElementById('btn-play');
 let selectForm = document.getElementById('difficulty-selection');
 let gridContainer = document.querySelector('.grid-container');
-
+let arrayNumbers = [];
 function randomNumberFrom (min, max) {
     return Math.floor(Math.random() * (max - min) ) + min;
 }
@@ -17,10 +17,13 @@ btnPlay.addEventListener('click', function () {
         for (let i = 0; i < 100; i++) {
             let square = document.createElement('div');
             square.classList.add('square');
-            let number = randomNumberFrom(1, 100);
+            let number = randomNumberFrom(1, 101);
+            while (arrayNumbers.includes(number)) {
+                number = randomNumberFrom(1, 101);
+            }
+            arrayNumbers.push(number);
             square.append(number);
             gridContainer.append(square);
-            console.log(number);
         }
 
     } else if (selectForm.value == 1) {
@@ -30,7 +33,11 @@ btnPlay.addEventListener('click', function () {
         for (let i = 0; i < 81; i++) {
             let square = document.createElement('div');
             square.classList.add('square');
-            let number = randomNumberFrom(1, 81);
+            let number = randomNumberFrom(1, 82);
+            while (arrayNumbers.includes(number)) {
+                number = randomNumberFrom(1, 82);
+            }
+            arrayNumbers.push(number);
             square.append(number);
             gridContainer.append(square);
         }
@@ -43,7 +50,11 @@ btnPlay.addEventListener('click', function () {
         for (let i = 0; i < 49; i++) {
             let square = document.createElement('div');
             square.classList.add('square');
-            let number = randomNumberFrom(1, 49);
+            let number = randomNumberFrom(1, 50);
+            while (arrayNumbers.includes(number)) {
+                number = randomNumberFrom(1, 50);
+            }
+            arrayNumbers.push(number);
             square.append(number);
             gridContainer.append(square);
         }
